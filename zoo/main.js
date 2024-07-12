@@ -16,43 +16,43 @@ function animalFactory(animalData) {
     }
 }
 
-window.onload = function () {
-    const animalListContent = document.getElementById('animal-list');
-    const speakButton = document.getElementById('speak-button');
 
-    function setAnimalList() {
-        animalListContent.innerHTML = ANIMALS_LIST.map(animal =>
-            `<li id="${animal.id}">${animal.name}</li>`
-        ).join('');
-        setEventListeners();
-    }
+const animalListContent = document.getElementById('animal-list');
+const speakButton = document.getElementById('speak-button');
 
-    function setEventListeners() {
-        animalListContent.addEventListener('click', (event) => {
-            const animalId = event.target.getAttribute('id');
-            setAnimalToViewer(animalId);
-        });
+function setAnimalList() {
+    animalListContent.innerHTML = ANIMALS_LIST.map(animal =>
+        `<li id="${animal.id}">${animal.name}</li>`
+    ).join('');
+    setEventListeners();
+}
 
-        speakButton.addEventListener('click', () => {
-            if (currentAnimal) {
-                console.log(currentAnimal.speak("I am speaking"));
-            }
-        });
-    }
+function setEventListeners() {
+    animalListContent.addEventListener('click', (event) => {
+        const animalId = event.target.getAttribute('id');
+        setAnimalToViewer(animalId);
+    });
 
-    function setAnimalToViewer(id) {
-        const animalData = ANIMALS_LIST.find(animal => animal.id.toString() === id);
-        currentAnimal = animalFactory(animalData);
-
+    speakButton.addEventListener('click', () => {
         if (currentAnimal) {
-            for (let key in currentAnimal) {
-                const fieldElement = document.getElementById(key);
-                if (fieldElement) {
-                    fieldElement.innerText = currentAnimal[key];
-                }
+            console.log(currentAnimal.speak("I am speaking"));
+        }
+    });
+}
+
+function setAnimalToViewer(id) {
+    const animalData = ANIMALS_LIST.find(animal => animal.id.toString() === id);
+    currentAnimal = animalFactory(animalData);
+
+    if (currentAnimal) {
+        for (let key in currentAnimal) {
+            const fieldElement = document.getElementById(key);
+            if (fieldElement) {
+                fieldElement.innerText = currentAnimal[key];
             }
         }
     }
+}
 
-    setAnimalList();
-};
+setAnimalList();
+

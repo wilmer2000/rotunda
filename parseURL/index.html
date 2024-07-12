@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ParseURL</title>
+    <script type="module" src="main.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <label for="input-format">Format:</label>
+            <input type="text" id="input-format">
+            <br>
+            <label for="input-url">URL:</label>
+            <input type="text" id="input-url">
+        </div>
+        <div class="col-12" id="parse-result-container">
+            <div class="row">
+                <div class="col-6">
+                    <label for="json-viewer">JSON</label>
+                    <textarea id="json-viewer"></textarea>
+                </div>
+                <div class="col-6">
+                    <label>List</label>
+                    <ul id="url-list">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <button id="parse-url-button">Parse URL</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
