@@ -1,0 +1,156 @@
+@import "variables.css";
+
+/* Reset some basic elements for consistency */
+button, input, select, textarea {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Button styles */
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #fff;
+    background-color: var(--forest-green);
+    border: 1px solid var(--forest-green);
+    border-radius: 0.25rem;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+.btn:hover, .btn:focus {
+    background-color: var(--dark-green);
+    border-color: var(--dark-green);
+}
+
+.btn:active {
+    background-color: var(--dark-green);
+    border-color: var(--dark-green);
+}
+
+.btn:disabled {
+    background-color: var(--forest-green);
+    border-color: var(--forest-green);
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+/* Input styles */
+.input-form {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.input-form:focus {
+    border-color: var(--medium-green);
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.input-form::placeholder {
+    color: #6c757d;
+    opacity: 1;
+}
+
+.input-form:disabled {
+    background-color: #e9ecef;
+    opacity: 1;
+}
+
+/* Select styles */
+.select-form {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20viewBox%3D%220%200%204%205%22%3E%3Cpath%20fill%3D%22%23000%22%20d%3D%22M2%200l2%202H0zM2%205l2-2H0z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 8px 10px;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    appearance: none;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.select-form:focus {
+    border-color: var(--medium-green);
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.select-form:disabled {
+    background-color: #e9ecef;
+    opacity: 1;
+}
+
+/* Textarea styles */
+.textarea-form {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.textarea-form:focus {
+    border-color: var(--medium-green);
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.textarea-form::placeholder {
+    color: #6c757d;
+    opacity: 1;
+}
+
+.textarea-form:disabled {
+    background-color: #e9ecef;
+    opacity: 1;
+}
+
+/* Form group styles */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+/* Label styles */
+.label-form {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}

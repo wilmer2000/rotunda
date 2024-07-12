@@ -1,0 +1,48 @@
+@import "variables.css";
+
+.card {
+    padding: 15px;
+    display: block;
+    background: #FFF;
+    box-shadow: var(--shadow-1);
+    border-radius: 10px;
+}
+
+.d-block {
+    display: block;
+}
+
+.list-style {
+    list-style: none;
+}
+
+.list-style li + li {
+    margin-top: 10px;
+}
+
+.f-color-1 {
+    color: var(--dark-green);
+}
+.f-color-2 {
+    color: var(--forest-green);
+}
+.f-color-3 {
+    color: var(--medium-green);
+}
+.f-color-4 {
+    color: var(--light-green);
+}
+.f-color-5 {
+    color: var(--mint-green);
+}
+
+.pointer-cursor {
+    cursor: pointer;
+}
+
+.h-100 {
+    height: 100%;
+}
+.w-100 {
+    width: 100%;
+}

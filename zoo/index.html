@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Zoo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../shared/styles/style.css">
+    <script type="module" src="./main.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="row gy-3 justify-center">
+        <div class="col-sm-12 col-md-4 col-lg-6">
+            <div class="animal-list-content card">
+                <h4 class="f-color-1">Animals</h4>
+                <p class="mb-3">Click one of them:</p>
+                <div id="animal-list" class="animal-list">
+                    <!-- Content list-->
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-8 col-lg-6">
+            <div class="animal-detail-content card">
+                <h4 class="f-color-1">Name of Animal</h4>
+                <div class="animal-image" id="animal-image"></div>
+                <ul id="animal-viewer" class="list-style mb-3">
+                </ul>
+                <div id="speak-text-content" class="speak-content d-flex flex-column gy-3">
+                    <div id="speak-text">
+                        <!-- Speak text list-->
+                    </div>
+                    <input type="text" id="input-speak-text" class="input-form"/>
+                    <button id="speak-button" class="btn d-block">Speak!</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

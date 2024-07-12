@@ -1,0 +1,79 @@
+@import "reset.css";
+@import "variables.css";
+@import "padding-margin.css";
+@import "grid.css";
+@import "flex.css";
+@import "fonts.css";
+@import "form.css";
+@import "shared.css";
+@import "responsive.css";
+
+
+body {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+/*Zoo*/
+.speak-text {
+    text-align: center;
+    padding: 30px;
+    display: block;
+    border-radius: 10px;
+    background: var(--mint-green);
+}
+
+#speak-text-content {
+    display: none;
+}
+
+.animal-list {
+    overflow-x: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+}
+
+.animal-selector-content {
+    grid-area: auto;
+    height: 150px;
+    width: 100%;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    float: left;
+}
+
+.animal-selector-content span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    width: 100%;
+    color: #FFF;
+    font-weight: 700;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(44, 110, 73, 1) 100%);
+}
+
+.animal-image {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: var(--shadow-1);
+    margin: 10px 0 30px;
+}
+
+
+/*ParseURL*/
+textarea#json-viewer {
+    resize: none;
+    width: 100%;
+}
+
+.json-viewer-content {
+    min-height: 300px;
+}

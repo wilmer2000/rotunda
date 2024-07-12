@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ParseURL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../shared/styles/style.css">
+    <script type="module" src="./main.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="row gy-3">
+        <div class="col-sm-12">
+            <div class="card">
+                <h4 class="f-color-2 mb-3">Parse URL</h4>
+                <div class="form-group mb-3">
+                    <label for="input-url">URL:</label>
+                    <input type="text" id="input-url" class="input-form">
+                </div>
+                <div class="form-group mb-0">
+                    <label for="input-format">Format:</label>
+                    <input type="text" id="input-format" class="input-form">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12" id="parse-result-container">
+            <div class="row gy-3 d-flex">
+                <div class="col-sm-12 col-md-6 align-self-stretch">
+                    <div class="card h-100">
+                        <h4 class="f-color-2 mb-3">JSON</h4>
+                        <textarea id="json-viewer" class="textarea-form json-viewer-content"></textarea>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 align-self-stretch">
+                    <div class="card h-100">
+                        <h4 class="f-color-2 mb-3">List</h4>
+                        <ul id="url-list" class="list-style">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="card d-flex justify-end">
+                <button id="parse-url-button" class="btn">Parse URL</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
