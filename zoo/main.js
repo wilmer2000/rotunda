@@ -25,7 +25,7 @@ const speakTextContent = document.getElementById('speak-text-content');
 
 function setAnimalList() {
     animalListContent.innerHTML = ANIMALS_LIST.map(animal =>
-        `<li id="${animal.id}" class="card">${animal.name}</li>`
+        `<div id="${animal.id}" class="card">${animal.name}</div>`
     ).join('');
 }
 
@@ -51,7 +51,7 @@ function setEventListeners() {
 
     speakButton.addEventListener('click', () => {
         if (currentAnimal && textToSpeak) {
-            speakTextContent.textContent = currentAnimal.speak(textToSpeak);
+            speakTextContent.innerHTML = `<h4 class="speak-text">${currentAnimal.speak(textToSpeak)}</h4>`;
         }
     });
 

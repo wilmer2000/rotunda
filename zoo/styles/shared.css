@@ -1,8 +1,10 @@
+@import "variables.css";
+
 .card {
     padding: 15px;
     display: block;
     background: #FFF;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 6px -1px, rgba(0, 0, 0, 0.06) 0 2px 4px -1px;
+    box-shadow: var(--shadow-1);
     border-radius: 10px;
 }
 
@@ -12,8 +14,12 @@
 
 .list-style {
     list-style: none;
-
 }
+
 .list-style li {
     cursor: pointer;
+}
+
+.list-style li + li {
+    margin-top: 10px;
 }

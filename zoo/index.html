@@ -20,14 +20,14 @@
             <div class="animal-list-content card">
                 <h4>Animals</h4>
                 <p>Click one of them:</p>
-                <ul id="animal-list" class="animal-list list-style d-flex flex-wrap g-3">
-                </ul>
+                <div id="animal-list" class="animal-list list-style d-flex flex-wrap g-3">
+                </div>
             </div>
         </div>
         <div class="col-sm-12 col-md-8">
             <div class="animal-detail-content card">
                 <h4>Name of Animal</h4>
-                <ul id="animal-viewer" class="list-style">
+                <ul id="animal-viewer" class="list-style mb-3">
                     <li>
                         <p><b class="d-block">Name:</b>
                             <span class="list-block" id="name"></span></p>
@@ -81,7 +81,7 @@
                         </p>
                     </li>
                 </ul>
-                <div class="speak-content">
+                <div class="speak-content d-flex flex-column gy-3">
                     <div id="speak-text-content"></div>
                     <input type="text" id="input-speak-text" class="input-form"/>
                     <button id="speak-button" class="btn d-block">Speak!</button>

@@ -1,4 +1,6 @@
 @import "./reset.css";
+@import "./variables.css";
+@import "./padding-margin.css";
 @import "./grid.css";
 @import "./flex.css";
 @import "./fonts.css";
@@ -14,4 +16,12 @@ body {
 
 .animal-list li {
 
+}
+
+.speak-text {
+    text-align: center;
+    padding: 30px;
+    display: block;
+    border-radius: 10px;
+    background: var(--mint-green);
 }

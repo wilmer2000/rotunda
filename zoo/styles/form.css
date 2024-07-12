@@ -1,10 +1,4 @@
-:root {
-    --dark-green: #2C6E49;
-    --forest-green: #4C9A2A;
-    --medium-green: #88C057;
-    --light-green: #B6E38E;
-    --mint-green: #DFF4D8;
-}
+@import "variables.css";
 
 /* Reset some basic elements for consistency */
 button, input, select, textarea {
