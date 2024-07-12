@@ -1,0 +1,94 @@
+/* Global styles */
+body {
+    font-family: 'Poppins', arial, sans-serif;
+    font-weight: 300; /* Default weight for body text */
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700; /* Bold weight for headings */
+}
+
+/* Specific heading styles */
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.75em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+h4 {
+    font-size: 1.25em;
+}
+
+h5 {
+    font-size: 1em;
+}
+
+h6 {
+    font-size: 0.875em;
+}
+
+/* Paragraphs and other text elements */
+p {
+    font-weight: 300;
+    font-size: 1em;
+}
+
+/* Links */
+a {
+    font-weight: 500;
+    text-decoration: none;
+}
+
+/* Emphasized text */
+em {
+    font-weight: 500;
+}
+
+/* Strong text */
+strong {
+    font-weight: 700;
+}
+
+/* Blockquotes */
+blockquote {
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* Lists */
+ul, ol {
+    font-weight: 300;
+}
+
+/* Code */
+code {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+}
+
+/* Classes */
+.poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
