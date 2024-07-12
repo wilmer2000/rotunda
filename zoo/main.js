@@ -4,6 +4,7 @@ import {TigerClass} from "./classes/tiger.class.js";
 import {AnimalClass} from "./classes/animal.class.js";
 
 let currentAnimal = null;
+let textToSpeak = null;
 
 function animalFactory(animalData) {
     switch (animalData.name) {
@@ -19,6 +20,8 @@ function animalFactory(animalData) {
 
 const animalListContent = document.getElementById('animal-list');
 const speakButton = document.getElementById('speak-button');
+const inputSpeakText = document.getElementById('input-speak-text');
+const speakTextContent = document.getElementById('speak-text-content');
 
 function setAnimalList() {
     animalListContent.innerHTML = ANIMALS_LIST.map(animal =>
@@ -33,10 +36,16 @@ function setEventListeners() {
     });
 
     speakButton.addEventListener('click', () => {
-        if (currentAnimal) {
-            console.log(currentAnimal.speak("I am speaking"));
+        if (currentAnimal && textToSpeak) {
+            speakTextContent.textContent = currentAnimal.speak(textToSpeak);
         }
     });
+
+    inputSpeakText.addEventListener('keyup', (event) => {
+        if (event.target.value) {
+            textToSpeak = event.target.value;
+        }
+    })
 }
 
 function setAnimalToViewer(id) {
@@ -52,7 +61,6 @@ function setAnimalToViewer(id) {
         }
     }
 }
-
 
 
 function main() {
