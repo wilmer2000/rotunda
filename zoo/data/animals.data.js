@@ -80,4 +80,17 @@ export const ANIMALS_LIST = [
         height_cm: 130,
         image: "https://fakeimg.pl/500x500/cc6611"
     }
-]
+];
+
+export const DESCRIPTION_TEXT = {
+    name: "Name",
+    species: "Species",
+    family: "Family",
+    habitat: "Habitat",
+    placeFound: "Place of found",
+    diet: "Diet",
+    description: "Description",
+    weight: 'Weight',
+    height: 'Height',
+    image: "Image"
+}

@@ -1,4 +1,4 @@
-import {ANIMALS_LIST} from './data/animals.data.js';
+import {ANIMALS_LIST, DESCRIPTION_TEXT} from './data/animals.data.js';
 import {LionClass} from "./classes/lion.class.js";
 import {TigerClass} from "./classes/tiger.class.js";
 import {AnimalClass} from "./classes/animal.class.js";
@@ -17,15 +17,31 @@ function animalFactory(animalData) {
     }
 }
 
+const ids = [
+    "animal-list",
+    "speak-button",
+    "input-speak-text",
+    "speak-text-content",
+    "speak-text",
+    "animal-viewer"
+];
+const [
+    animalListContent,
+    speakButton,
+    inputSpeakText,
+    speakTextContent,
+    speakText,
+    animalViewer
+] = ids.map(id => document.getElementById(id));
 
-const animalListContent = document.getElementById('animal-list');
-const speakButton = document.getElementById('speak-button');
-const inputSpeakText = document.getElementById('input-speak-text');
-const speakTextContent = document.getElementById('speak-text-content');
 
 function setAnimalList() {
     animalListContent.innerHTML = ANIMALS_LIST.map(animal =>
-        `<div id="${animal.id}" class="card">${animal.name}</div>`
+        `
+            <div id="${animal.id}" class="card pointer-cursor">
+                ${animal.name}
+            </div>
+        `
     ).join('');
 }
 
@@ -51,7 +67,7 @@ function setEventListeners() {
 
     speakButton.addEventListener('click', () => {
         if (currentAnimal && textToSpeak) {
-            speakTextContent.innerHTML = `<h4 class="speak-text">${currentAnimal.speak(textToSpeak)}</h4>`;
+            speakText.innerHTML = `<h4 class="speak-text">${currentAnimal.speak(textToSpeak)}</h4>`;
         }
     });
 
@@ -67,12 +83,19 @@ function setAnimalToViewer(id) {
     currentAnimal = animalFactory(animalData);
 
     if (currentAnimal) {
+        let list = [];
         for (let key in currentAnimal) {
-            const fieldElement = document.getElementById(key);
-            if (fieldElement) {
-                fieldElement.innerText = currentAnimal[key];
-            }
+            list.push(
+                `
+                    <li>
+                        <p><b class="d-block">${DESCRIPTION_TEXT[key]}:</b>
+                        <span class="list-block" id="${currentAnimal[key].id || ''}">${currentAnimal[key]}</span></p>
+                    </li>
+                `
+            );
         }
+        animalViewer.innerHTML = list.join('\n');
+        speakTextContent.style.display = 'flex';
     }
 }
 

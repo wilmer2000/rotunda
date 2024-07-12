@@ -25,3 +25,7 @@ body {
     border-radius: 10px;
     background: var(--mint-green);
 }
+
+#speak-text-content {
+    display: none;
+}
