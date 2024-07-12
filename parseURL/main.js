@@ -1,3 +1,5 @@
+
+
 const inputURL = document.getElementById('input-url');
 const inputFormat = document.getElementById('input-format');
 const jsonViewer = document.getElementById('json-viewer');
@@ -46,6 +48,19 @@ function parseUrl(url, format) {
     return Object.assign(pathResult, paramsResult);
 }
 
+function setJSONViewer(urlParsed) {
+    jsonViewer.textContent = JSON.stringify(urlParsed, null, 2);
+}
+
+function setListViewer(urlParsed) {
+    urlList.innerHTML = Object.keys(urlParsed).map((k) => {
+        return `<li id="${k}">
+                    <span>${k}</span>
+                    ${urlParsed[k]}
+                </li>`
+    }).join('');
+}
+
 function setEventListeners() {
     inputURL.addEventListener('keyup', (event) => {
         urlToParse = event.target.value ?? '';
@@ -56,7 +71,8 @@ function setEventListeners() {
     parseButton.addEventListener('click', () => {
         if (urlToParse && formatToUse) {
             urlParsed = parseUrl(urlToParse, formatToUse);
-            jsonViewer.textContent = JSON.stringify(urlParsed, null, 2);
+            setJSONViewer(urlParsed);
+            setListViewer(urlParsed);
         }
     });
 }
