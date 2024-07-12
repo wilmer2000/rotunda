@@ -12,9 +12,15 @@ function setJSONViewer(urlParsed) {
 
 function setListViewer(urlParsed) {
     urlList.innerHTML = Object.keys(urlParsed).map((k) => {
-        return `<li id="${k}">
-                    <span>${k}</span>
-                    ${urlParsed[k]}
+        return `<li>
+                    <div class="d-flex">
+                        <div class="flex-grow-1">
+                            <b class="d-block">${k}</b>
+                        </div>
+                        <div class="flex-grow-1"></div>
+                        
+                        <span class="list-block">${urlParsed[k]}</span>
+                    </div>
                 </li>`
     }).join('');
 }

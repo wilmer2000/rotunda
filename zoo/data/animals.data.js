@@ -13,7 +13,7 @@ export const ANIMALS_LIST = [
         description: "The lion is a large and powerful wild cat known for its majestic appearance and social behavior.",
         weight_kg: 190,
         height_cm: 120,
-        image: "https://fakeimg.pl/500x500/cc6601"
+        image: "./img/lion.jpg"
     },
     {
         id: 2,
@@ -26,7 +26,7 @@ export const ANIMALS_LIST = [
         description: "The elephant is the largest land animal on Earth and is known for its intelligence and long trunk.",
         weight_kg: 6000,
         height_cm: 300,
-        image: "https://fakeimg.pl/500x500/cc6602"
+        image: "./img/elephant.jpg"
     },
     {
         id: 3,
@@ -39,7 +39,7 @@ export const ANIMALS_LIST = [
         description: "The tiger is a powerful predator with striking orange fur and black stripes.",
         weight_kg: 250,
         height_cm: 100,
-        image: "https://fakeimg.pl/500x500/cc6603"
+        image: "./img/tiger.jpg"
     },
     {
         id: 4,
@@ -52,7 +52,7 @@ export const ANIMALS_LIST = [
         description: "Kangaroos are marsupials known for their powerful hind legs and pouches.",
         weight_kg: 85,
         height_cm: 150,
-        image: "https://fakeimg.pl/500x500/cc6604"
+        image: "./img/kangaroo.jpg"
     },
     {
         id: 5,
@@ -65,7 +65,7 @@ export const ANIMALS_LIST = [
         description: "Gorillas are large and powerful primates known for their intelligence and social structure.",
         weight_kg: 180,
         height_cm: 160,
-        image: "https://fakeimg.pl/500x500/cc6610"
+        image: "./img/gorilla.jpg"
     },
     {
         id: 6,
@@ -78,7 +78,7 @@ export const ANIMALS_LIST = [
         description: "Polar bears are large carnivorous mammals adapted to life in the Arctic and primarily feed on seals.",
         weight_kg: 500,
         height_cm: 130,
-        image: "https://fakeimg.pl/500x500/cc6611"
+        image: "./img/polar_bear.jpg"
     }
 ];
 
@@ -92,5 +92,4 @@ export const DESCRIPTION_TEXT = {
     description: "Description",
     weight: 'Weight',
     height: 'Height',
-    image: "Image"
 }

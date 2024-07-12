@@ -24,7 +24,8 @@
         "input-speak-text",
         "speak-text-content",
         "speak-text",
-        "animal-viewer"
+        "animal-viewer",
+        "animal-image"
     ];
     const [
         animalListContent,
@@ -32,15 +33,18 @@
         inputSpeakText,
         speakTextContent,
         speakText,
-        animalViewer
+        animalViewer,
+        animalImage
     ] = ids.map(id => document.getElementById(id));
 
 
     function setAnimalList() {
         animalListContent.innerHTML = ANIMALS_LIST.map(animal =>
             `
-            <div id="${animal.id}" class="card pointer-cursor">
-                ${animal.name}
+            <div id="${animal.id}" 
+                class="card pointer-cursor animal-selector-content" 
+                style="background-image: url('${animal.image}');">
+                <span id="${animal.id}">${animal.name}</span>
             </div>
         `
         ).join('');
@@ -48,11 +52,6 @@
 
     function setEventListeners() {
         animalListContent.addEventListener('click', (event) => {
-            // Event delegation is used to capture click events on animalListContent.
-            // The id attribute is expected from the element clicked.
-            // However, if a child (without id) within the parent is clicked,
-            // the event target becomes the child, returning null/undefined for id.
-            // Solution: Find the clicked element's nearest parent (with id) or the element itself.
             let element = event.target;
             while (element && element !== animalListContent) {
                 if (element.hasAttribute('id')) {
@@ -86,15 +85,18 @@
         if (currentAnimal) {
             let list = [];
             for (let key in currentAnimal) {
-                list.push(
-                    `
+                if (DESCRIPTION_TEXT[key]) {
+                    list.push(
+                        `
                     <li>
                         <p><b class="d-block">${DESCRIPTION_TEXT[key]}:</b>
                         <span class="list-block" id="${currentAnimal[key].id || ''}">${currentAnimal[key]}</span></p>
                     </li>
                 `
-                );
+                    );
+                }
             }
+            animalImage.innerHTML = `<img src="${currentAnimal['image']}" alt="${currentAnimal['name']}">`
             animalViewer.innerHTML = list.join('\n');
             speakTextContent.style.display = 'flex';
             speakText.innerHTML = '';
