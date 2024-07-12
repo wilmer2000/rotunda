@@ -53,7 +53,7 @@ function setEventListeners() {
     inputFormat.addEventListener('keyup', (event) => {
         formatToUse = event.target.value ?? '/:version/api/:collection/:id';
     });
-    parseButton.addEventListener('click', (event) => {
+    parseButton.addEventListener('click', () => {
         if (urlToParse && formatToUse) {
             urlParsed = parseUrl(urlToParse, formatToUse);
             jsonViewer.textContent = JSON.stringify(urlParsed, null, 2);
