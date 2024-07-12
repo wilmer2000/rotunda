@@ -224,27 +224,62 @@
     order: 13;
 }
 
-/* Gap utility classes */
-.gap-0 {
-    gap: 0;
+/* Horizontal Gap */
+.gx-0 {
+    column-gap: 0rem;
+}
+.gx-1 {
+    column-gap: 0.25rem;
+}
+.gx-2 {
+    column-gap: 0.5rem;
+}
+.gx-3 {
+    column-gap: 1rem;
+}
+.gx-4 {
+    column-gap: 1.5rem;
+}
+.gx-5 {
+    column-gap: 3rem;
 }
 
-.gap-1 {
-    gap: 0.25rem; /* 4px */
+/* Vertical Gap */
+.gy-0 {
+    row-gap: 0rem;
+}
+.gy-1 {
+    row-gap: 0.25rem;
+}
+.gy-2 {
+    row-gap: 0.5rem;
+}
+.gy-3 {
+    row-gap: 1rem;
+}
+.gy-4 {
+    row-gap: 1.5rem;
+}
+.gy-5 {
+    row-gap: 3rem;
 }
 
-.gap-2 {
-    gap: 0.5rem; /* 8px */
+/* Both Axes Gap */
+.g-0 {
+    gap: 0rem;
 }
-
-.gap-3 {
-    gap: 1rem; /* 16px */
+.g-1 {
+    gap: 0.25rem;
 }
-
-.gap-4 {
-    gap: 1.5rem; /* 24px */
+.g-2 {
+    gap: 0.5rem;
 }
-
-.gap-5 {
-    gap: 3rem; /* 48px */
+.g-3 {
+    gap: 1rem;
+}
+.g-4 {
+    gap: 1.5rem;
+}
+.g-5 {
+    gap: 3rem;
 }

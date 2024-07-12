@@ -2,4 +2,16 @@
 @import "./grid.css";
 @import "./flex.css";
 @import "./fonts.css";
+@import "./form.css";
 @import "./shared.css";
+@import "./responsive.css";
+
+
+body {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.animal-list li {
+
+}

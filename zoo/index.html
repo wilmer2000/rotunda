@@ -15,33 +15,76 @@
 <body>
 
 <div class="container">
-    <div class="row gap-3">
-        <div class="col-sm-12">
+    <div class="row gy-3">
+        <div class="col-sm-12 col-md-4">
             <div class="animal-list-content card">
                 <h4>Animals</h4>
                 <p>Click one of them:</p>
-                <ul id="animal-list">
+                <ul id="animal-list" class="animal-list list-style d-flex flex-wrap g-3">
                 </ul>
             </div>
         </div>
-        <div class="col-sm-12">
+        <div class="col-sm-12 col-md-8">
             <div class="animal-detail-content card">
                 <h4>Name of Animal</h4>
-                <ul id="animal-viewer">
-                    <li><p>Name: <span id="name"></span></p></li>
-                    <li><p>Species: <span id="species"></span></p></li>
-                    <li><p>Family: <span id="family"></span></p></li>
-                    <li><p>Habitat: <span id="habitat"></span></p></li>
-                    <li><p>Place of found: <span id="placeFound"></span></p></li>
-                    <li><p>Diet: <span id="diet"></span></p></li>
-                    <li><p>Description: <span id="description"></span></p></li>
-                    <li><p>Weight: <span id="weight"></span> Kg.</p></li>
-                    <li><p>Height: <span id="height"></span> Cm.</p></li>
+                <ul id="animal-viewer" class="list-style">
+                    <li>
+                        <p><b class="d-block">Name:</b>
+                            <span class="list-block" id="name"></span></p>
+                    </li>
+                    <li>
+                        <p>
+                            <b class="d-block">Species:</b>
+                            <span id="species"></span>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <b class="d-block">Family:</b>
+                            <span id="family"></span>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <b class="d-block">Habitat:</b>
+                            <span id="habitat"></span>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <b class="d-block">Place of found:</b>
+                            <span id="placeFound"></span>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <b class="d-block">Diet:</b>
+                            <span id="diet"></span>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <b class="d-block">Description:</b>
+                            <span id="description"></span>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <b class="d-block">Weight:</b>
+                            <span id="weight"></span> Kg.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <b class="d-block">Height:</b>
+                            <span id="height"></span> Cm.
+                        </p>
+                    </li>
                 </ul>
                 <div class="speak-content">
                     <div id="speak-text-content"></div>
-                    <input type="text" id="input-speak-text"/>
-                    <button id="speak-button">Speak!</button>
+                    <input type="text" id="input-speak-text" class="input-form"/>
+                    <button id="speak-button" class="btn d-block">Speak!</button>
                 </div>
             </div>
 
