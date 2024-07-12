@@ -97,6 +97,8 @@
             }
             animalViewer.innerHTML = list.join('\n');
             speakTextContent.style.display = 'flex';
+            speakText.innerHTML = '';
+            inputSpeakText.value = '';
         }
     }
 

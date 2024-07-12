@@ -1,12 +1,12 @@
-@import "./reset.css";
-@import "./variables.css";
-@import "./padding-margin.css";
-@import "./grid.css";
-@import "./flex.css";
-@import "./fonts.css";
-@import "./form.css";
-@import "./shared.css";
-@import "./responsive.css";
+@import "reset.css";
+@import "variables.css";
+@import "padding-margin.css";
+@import "grid.css";
+@import "flex.css";
+@import "fonts.css";
+@import "form.css";
+@import "shared.css";
+@import "responsive.css";
 
 
 body {
