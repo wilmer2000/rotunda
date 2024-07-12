@@ -24,7 +24,6 @@ function setAnimalList() {
     animalListContent.innerHTML = ANIMALS_LIST.map(animal =>
         `<li id="${animal.id}">${animal.name}</li>`
     ).join('');
-    setEventListeners();
 }
 
 function setEventListeners() {
@@ -54,5 +53,11 @@ function setAnimalToViewer(id) {
     }
 }
 
-setAnimalList();
 
+
+function main() {
+    setAnimalList();
+    setEventListeners();
+}
+
+main();
